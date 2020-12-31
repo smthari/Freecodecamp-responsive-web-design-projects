@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+#navbar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: thin;
+}
+
+#main-doc header {
+    text-align: left;
+    margin: 0px;
+}
+
+#navbar ul {
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#navbar li {
+    color: #4d4e53;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+#navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: #4d4e53;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+section article {
+    color: #4d4e53;
+    margin: 15px;
+    font-size: 0.96em;
+}
+
+section li {
+    margin: 15px 0px 0px 20px;
+}
+
+/* code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+} */
+
+.textcode {
+    font-family: Consolas, "courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    /* padding: 2px; */
+    font-size: 115%;
+}
+
+textarea {
+    /* margin: 4px, 4px; */
+    padding: 4px;
+    /* background-color: #08c708; */
+    width: 75%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.button {
+    display: inline-block;
+    position: absolute;
+    font-size: 0.9em;
+    background-color: rgb(230, 14, 43);
+    color: #fff;
+    transition: all 300ms ease;
+    cursor: pointer;
+    width: 20%;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+.button:hover {
+    background-color: rgb(24, 40, 185);
+    color: #fff;
+}
+
+.startertemplate {
+    text-align-last: left;
+    float: left;
+    width: 100%;
+    height: 400px;
+}
+
+.downloadbtn {
+    font-weight: 500;
+    color: #7952b3;
+    border-color: #7952b3;
+    width: 100px;
+    height: 40px;
+}
+
+table {
+    border: 1px solid #111;
+    width: 800px;
+    height: 150px;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    border: 1px solid #111;
+    padding: .75rem;
+}
+
+tr div {
+    width: 250px;
+}
+
+.included {
+    color: red;
+}
+
+.notincluded {
+    color: rgb(136, 226, 17);
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #navbar ul {
+        border: 1px solid;
+        height: 207px;
+    }
+    #navbar {
+        position: relative;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+    }
+    #main-doc {
+        margin: 0;
+        width: 100%;
+    }
+    .button {
+        position: relative;
+        font-size: 0.9em;
+        background-color: rgb(230, 14, 43);
+        color: #fff;
+        transition: all 300ms ease;
+        cursor: pointer;
+        width: 150px;
+        height: 50px;
+        margin-left: 0;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .tablediv {
+        overflow-x: auto;
+    }
+    textarea {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .downloadbtn {
+        margin: 10px 0 10px 0;
+        width: 50%;
+    }
+}
