@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+        }
+
+        body {
+            font-size: 16px;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .group {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px;
+            margin-left: 80px;
+            margin-right: 50px;
+        }
+
+        .form-container {
+            background-color: rgb(6, 78, 60);
+            border: 2px solid rgb(243, 231, 231);
+        }
+
+        label,
+        .labeltext {
+            padding-right: 10px;
+            width: 150px;
+        }
+
+        #title {
+            text-align: center;
+            color: #111;
+            background: #b3b5e5;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+
+        #description {
+            text-align: center;
+            padding: 5px;
+            background: #1d160e;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: inline-block;
+            margin-right: 0.625rem;
+        }
+
+        #submit {
+            display: block;
+            width: 95%;
+            padding: 0.75rem;
+            background-color: orange;
+            color: inherit;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: 70%;
+            padding: 5px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        textarea {
+            width: 70%;
+            height: 80px;
+        }
+
+        #survey-form {
+            margin: 10px;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            background-color: #111;
+            color: #fff;
+            outline: none;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .form-container {
+                overflow: scroll;
+                box-sizing: content-box;
+            }
+
+            .group {
+                padding: 10px;
+                margin: 0;
+                display: block;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            input[type="email"] {
+                margin-top: 5px;
+                width: 100%;
+            }
+            textarea {
+                margin-top: 5px;
+                width: 100%;
+            }
+            #dropdown {
+                margin-top: 5px;
+            }
+
+            #itemtext {
+                margin-bottom: 5px;
+            }
+            .labeltextresponse {
+                margin-bottom: 5px;
+            }
+            #submit {
+                width: 100%;
+            }
+            #title {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center> -->
+    <div class="form-container">
+        <header class="header">
+            <h1 id="title">Developers Survey Form </h1>
+            <p id="description">Thank you for taking the time to help us know the about world wide developers </p>
+        </header>
+        <form id="survey-form" autocomplete="off">
+
+            <div class="group">
+                <label for="name" id="name-label">Name :-</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="group">
+                <label for="email" id="email-label">Email :-</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="group">
+                <label for="number" id="number-label">Age :-</label>
+                <input type="number" id="number" min="10" max="99" placeholder="Age">
+            </div>
+
+            <div class="group">
+                <p class="labeltext">Nationality :-</p>
+                <select name="Country" id="dropdown">
+                    <option value="India">Indian</option>
+                    <option value="USA">American</option>
+                    <option value="Australia">Australian</option>
+                    <option value="Iran">Iranian</option>
+                    <option value="Russia">Russian</option>
+                    <option value="Russia">Other</option>
+                </select>
+            </div>
+            <div class="group">
+                <p class="labeltext labeltextresponse">Developer :-</p>
+                <label><input type="radio" name="Role" value="Male">Frontend</label>
+                <label><input type="radio" name="Role" value="Female">Backend</label>
+                <label><input type="radio" name="Role" value="Both">Fullstack</label>
+            </div>
+            <div class="group">
+                <p class="labeltext labeltextresponse">Qualification :-</p>
+                <label><input type="checkbox" name="Role2" value="10+2">10+2</label>
+                <label><input type="checkbox" name="Role2" value="Graduation">Graduation</label>
+                <label><input type="checkbox" name="Role2" value="Degree">Degree</label>
+            </div>
+            <div class="group">
+                <p class="labeltext">Describe about you :-</p>
+                <textarea id="comments" name="comments"> </textarea>
+            </div>
+            <div class="group">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- </center> -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
