@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+
+        body {
+            background-color: #111;
+        }
+
+        header {
+            width: 100%;
+            margin: auto;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            background-color: #fff;
+        }
+
+        .logo-container,
+        .nav-links,
+        .cart {
+            display: flex;
+            margin: 50px;
+        }
+
+        .logo-container {
+            flex: 1;
+        }
+
+        .logo {
+            margin: 12px 0 0 -10px;
+            font-size: 25px;
+            font-weight: 400;
+            ;
+        }
+
+        nav {
+            flex: 2;
+        }
+
+        .nav-links {
+            justify-content: space-evenly;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #252929;
+            font-size: 20px;
+        }
+
+        .cart {
+            flex: 1
+        }
+
+        .cart {
+            justify-content: flex-end;
+        }
+
+        /* service section  */
+
+
+        h1 {
+            text-align: center;
+            margin: 50px auto 40px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .main {
+            width: 100%;
+            min-height: 380px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .service {
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            box-shadow: 0 0 25px -5px rgb(253, 253, 253);
+            transition: transform .8s;
+            height: 372px;
+            margin: 50px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .service-logo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin: -90px auto 0;
+            background: #111;
+            border: 18px solid rgb(240, 240, 20);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service h4 {
+            height: 35px;
+            width: 80%;
+            margin: 50px auto;
+            background: #111;
+            position: relative;
+        }
+
+        .service h4::after,
+        .service h4::before {
+            content: '';
+            width: 40px;
+            height: 30px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .service h4::after {
+            background: linear-gradient(to right, #fff, rgb(240, 240, 20));
+            right: -5px;
+            top: -5px;
+        }
+
+        .service h4::before {
+            background: linear-gradient(to right, rgb(240, 240, 20), #fff);
+            left: -5px;
+            bottom: -5px;
+        }
+
+        .main:hover .service {
+            transform: translateY(-40px);
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 180px;
+        }
+
+        .service-colum {
+            flex: 3;
+            background: #111;
+        }
+
+        i {
+            font-size: 50px;
+        }
+
+        .service p {
+            font-size: 25px;
+        }
+
+        /* news letter  */
+
+
+        hr {
+            width: 100%;
+            height: 1px;
+
+            background-color: #FFFFFF;
+            border: none;
+        }
+
+        p {
+            padding: 5px 0;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 1.3em;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+        }
+
+        .overlay {
+            /* width: 100vw; */
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background-color: #111;
+        }
+
+        .modal {
+            width: 500px;
+            padding: 0px 30px 30px 30px;
+            border-radius: 5px 5px 5px 5px;
+            margin-right: 50px;
+            margin-top: 50px;
+        }
+
+        .modal p {
+            padding: 15px 0;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 1.3em;
+            color: #fff;
+        }
+
+        .product {
+            margin-left: 20px;
+        }
+
+        .input {
+            width: 75%;
+            height: 44px;
+
+            background: #FDFCFB;
+
+            border-radius: 5px 0 0 5px;
+            border: none;
+
+            font-family: inherit;
+            color: #737373;
+            letter-spacing: 1px;
+            text-indent: 5%;
+        }
+
+        .button {
+            width: 25%;
+            height: 46px;
+            background-color: rgb(240, 240, 20);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            font-family: inherit;
+            font-weight: bold;
+            color: inherit;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        /* how it works  */
+        #how-it-works {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #how-it-works>iframe {
+            max-width: 560px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 600px) {
+            .row {
+                display: block;
+            }
+
+            .main {
+                min-height: 550px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header id="header">
+            <div class="logo-container">
+                <img  id="header-img". src="logo.png" alt="logo" width="100px" height="50px" style="    margin-left: -50px;" ; />
+                <h4 class="logo">Intellilens</h4>
+            </div>
+
+            <nav id="nav-bar">
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#services">Services</a></li>
+                    <li><a class="nav-link" href="#how-it-works">How it's work</a></li>
+                </ul>
+            </nav>
+
+            <div class="cart">
+                <img src="cart.svg" alt="cart" />
+            </div>
+        </header>
+
+        <section id="home">
+            <div class="overlay">
+                <div class="modal">
+                    <h1>
+                        100% Cashback for new user
+                    </h1>
+                    <hr />
+                    <p>
+                        get 100% cashback on your first purchase this is valid for only for new user for Use code - NEW100 to avail this offer sign up now
+                    </p>
+                    <form id="form" action="#" method="post" name="sign-up">
+                        <input id="email" type="email" class="input" name="email" placeholder="abc@example.com"
+                            required>
+                        <input type="submit" class="button" id="submit" value="SIGN UP">
+                    </form>
+                </div>
+
+                <div class="product">
+                    <img src="product.png" height="500px">
+                </div>
+        </section>
+
+
+        <section id="services">
+            <h1>Services</h1>
+            <div class="container">
+                <div class="row">
+
+                    <div class="service-colum">
+                        <div class="main">
+                            <div class="service">
+                                <div class="service-logo"><i class="fas fa-bed"></i></div>
+                                <h4>SLEEP BETTER </h4>
+                                <p>⚡ Blue light impedes the brain production of melatonin, resulting in sleep disorders.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-colum">
+                        <div class="main">
+                            <div class="service">
+                                <div class="service-logo"><i class="fas fa-briefcase"></i></div>
+                                <h4>WORK BETTER </h4>
+                                <p>⚡ Digital eye strain negatively affects the output, and can lead to less
+                                    productivity. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-colum">
+                        <div class="main">
+                            <div class="service">
+                                <div class="service-logo"><i class="fas fa-eye"></i></div>
+                                <h4>SEE BETTER </h4>
+                                <p>⚡ Blue wavelengths can provoke headaches, sore eyes and blurred vision. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/fcxgs4y0MlM" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </section>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
