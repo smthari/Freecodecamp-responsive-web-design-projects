@@ -1,0 +1,137 @@
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 5%;
+}
+
+.welcomecontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.hello {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.hello h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--clr-light);
+}
+
+.hello p {
+  color: var(--clr-accent);
+}
+
+.profile {
+  max-width: 50%;
+}
+
+.profile img {
+  border-radius: 50%;
+  right: 50%;
+}
+
+/* css for leran more button  */
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px var(--clr-accent);
+  color: var(--clr-accent);
+  transition: color 0.25s;
+  position: relative;
+}
+
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+
+.draw-border:hover {
+  color: rgb(192, 226, 97);
+}
+
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: yellow;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: 1em 1em;
+  letter-spacing: 0.05rem;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  margin: -5px 0 0 -2px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: ;
+}
+
+@media (max-width: 800px) {
+  .welcomecontainer {
+    display: flex;
+    justify-content: unset;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .hello {
+    max-width: 90%;
+    position: relative;
+    text-align: center;
+  }
+  .profile {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+  .profile img {
+    width: 250px;
+    height: 250px;
+  }
+}

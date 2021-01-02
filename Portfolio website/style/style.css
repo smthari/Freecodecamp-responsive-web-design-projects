@@ -1,0 +1,39 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --fw-bold: 600;
+    --clr-light: rgb(240, 240, 20);
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    --fs-h2: 1.25rem;
+    --fs-body: 1rem;
+    --speed: 180px;
+}
+
+@media (max-width: 800px) {
+    :root {
+        --fs-h2: 1.75rem;
+        --fs-body: 1.125rem;
+        --speed: 300px;
+        --fw-bold: 900;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111111;
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    user-select: none;
+}

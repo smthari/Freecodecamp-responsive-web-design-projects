@@ -1,0 +1,108 @@
+#services h1 {
+    text-align: center;
+    margin: 50px auto 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.main {
+    width: 100%;
+    min-height: 380px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.service {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    box-shadow: 0 0 25px -5px rgb(253, 253, 253);
+    transition: transform .8s;
+    height: 405px;
+    margin: 50px;
+    color: #fff;
+}
+
+.service-logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: -90px auto 0;
+    background: #111;
+    border: 18px solid rgb(240, 240, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service h4 {
+    height: 35px;
+    width: 80%;
+    margin: 50px auto;
+    background: #111;
+    position: relative;
+}
+
+.service h4::after,
+.service h4::before {
+    content: '';
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    z-index: -1;
+}
+
+.service h4::after {
+    background: linear-gradient(to right, #fff, rgb(240, 240, 20));
+    right: -5px;
+    top: -5px;
+}
+
+.service h4::before {
+    background: linear-gradient(to right, rgb(240, 240, 20), #fff);
+    left: -5px;
+    bottom: -5px;
+}
+
+.main:hover .service {
+    transform: translateY(-40px);
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 180px;
+}
+
+.service-colum {
+    flex: 3;
+    background: #111;
+}
+
+i {
+    font-size: 50px;
+}
+
+@media (max-width: 800px) {
+    #services h1 {
+        margin: 50px auto -150px;
+    }
+    .row {
+        display: block;
+    }
+    .main {
+        min-height: 500px;
+    }
+    .service {
+        margin: 15px;
+        height: 424px;
+    }
+    .service-colum {
+        margin-top: 40px;
+    }
+}
